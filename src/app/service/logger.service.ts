@@ -4,7 +4,7 @@ export class Logger {
   logs: string[] = []; // capture logs for testing
   log(message: string) {
     this.logs.push(message);
+    console.log("Logger start.....");
     console.log(message);
   }
 }
-
