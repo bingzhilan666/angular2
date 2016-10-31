@@ -4,9 +4,11 @@ import {HeroesComponent} from './heroes.component';
 import {HeroService} from "./hero.service";
 import {HeroListComponent} from "./hero-list/hero-list.component";
 import {Logger} from "../service/logger.service";
+import {FormsModule} from "@angular/forms";
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   declarations: [
     HeroListComponent,

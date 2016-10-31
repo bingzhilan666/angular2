@@ -1,0 +1,14 @@
+<h3>Top Heroes</h3>
+<div class="grid grid-pad">
+  <div *ngFor="let hero of heroes" (click)="gotoDetail(hero)" class="col-1-4">
+    <div class="module hero">
+      <h4>{{hero.name}}</h4>
+    </div>
+  </div>
+  <div>
+    <input type="radio" name="colors" (click)="color = 'lightgreen'" > Green
+    <input type="radio" name="colors" (click)="color = 'yellow'" >Yellow
+    <input type="radio" name="colors" (click)="color = 'cyan'" >Cyan
+  </div>
+  <div><p [myHighlight] = "color" [defaultColor] = "'violet'">this is  a test </p></div>
+</div>

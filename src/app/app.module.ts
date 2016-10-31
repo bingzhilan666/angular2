@@ -6,19 +6,27 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 //import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import {AppRoutingModule} from "./app-routing.module";
+import {HighlightDirective} from "./directive/highlight.directive";
 
 @NgModule({
   declarations: [
     AppComponent,
+    DashboardComponent,
    // LoginComponent
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    HeroesModule
+    HeroesModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}
