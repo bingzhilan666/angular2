@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Login} from "./Login";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,7 @@ import {Login} from "./Login";
 })
 export class LoginComponent{
   public login: Login = new Login(1, "test","","");
-  constructor() {
+  constructor(private router:Router) {
   }
   verificationCode = Math.floor(Math.random()*10000000) + "";
   checkCode =  "";
@@ -19,7 +20,10 @@ export class LoginComponent{
     this.checkCode = Math.floor(Math.random()*10000000) + "" ;
   }
   submitted = false;
-  onSubmit() { this.submitted = true; }
+  onSubmit() {
+    this.submitted = true;
+    this.router.navigate(['/heroes']);
+  }
   isVerified = false;
   onKey1(value: string) {
     if (value != this.verificationCode) {

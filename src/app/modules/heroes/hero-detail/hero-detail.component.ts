@@ -4,11 +4,11 @@ import {HeroService} from "../hero.service";
 
 
 @Component({
-  selector: 'hero-list',
-  templateUrl: 'hero-list.component.html',
-  styleUrls: ['hero-list.component.css']
+  selector: 'hero-detail',
+  templateUrl: 'hero-detail.component.html',
+  styleUrls: ['hero-detail.component.css']
 })
-export class HeroListComponent implements OnInit {
+export class HeroDetailComponent implements OnInit {
   heroes: Hero[];
   constructor(heroService: HeroService) {
     this.heroes = heroService.getHeroes();

@@ -4,7 +4,7 @@ import { Component }          from '@angular/core';
   selector: 'my-heroes',
   template: `
   <h2>Heroes</h2>
-  <hero-list></hero-list>
+  <hero-detail></hero-detail>
   `
 })
 export class HeroesComponent {
