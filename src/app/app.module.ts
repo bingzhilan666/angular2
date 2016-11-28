@@ -1,30 +1,33 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HeroesModule} from './modules/heroes/heroes.module';
+// import { HeroesModule} from './modules/heroes/heroes.module';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+// import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import {LoginComponent} from "./login/login.component";
-import {RouterModule} from "@angular/router";
-import {HeroesComponent} from "./modules/heroes/heroes.component";
+import {TodoComponent} from "./todo/todo.component";
+import {TodoListComponent} from "./todo-list/todo-list.component";
+import {MakeDraggable} from "./shared/make-draggable.directive";
+import {MakeDroppable} from "./shared/make-droppable.directive";
+// import {LoginComponent} from "./login/login.component";
+// import { NavigationComponent } from './navigation/navigation.component';
+// import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    // LoginComponent,
+    // NavigationComponent,
+    TodoComponent,
+    TodoListComponent,
+    MakeDraggable, MakeDroppable
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule,
-    HeroesModule,
-    RouterModule.forRoot([
-      {path:'login',component: LoginComponent},
-      {path:'heroes', component: HeroesComponent},
-      {path:'', redirectTo: '/login', pathMatch: 'full'}
-      ]
-    )
+    FormsModule
+    // HttpModule,
+    // HeroesModule
+    // AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
